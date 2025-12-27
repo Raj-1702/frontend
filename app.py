@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 import warnings
 import json
 
+
+HOSTNAME = "https://backend-2-eon0.onrender.com/"
 # Suppress warnings
 warnings.filterwarnings('ignore')
 
@@ -131,7 +133,7 @@ if 'filters_loaded' not in st.session_state:
 
 API_BASE_URL = st.sidebar.text_input(
     "API Base URL",
-    value="http://localhost:8000/api",
+    value=f"{HOSTNAME}/api",
     help="Enter your Django API base URL"
 )
 
