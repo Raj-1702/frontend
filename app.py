@@ -654,7 +654,7 @@ if page == "📊 Production Analytics":
                     uploaded_file.seek(0)
                     try:
                         response = requests.post(
-                            "http://127.0.0.1:8000/api/get-filter-options/",
+                            "https://backend-2-eon0.onrender.com/api/get-filter-options/",
                             files={"file": uploaded_file}
                         )
                         if response.status_code == 200:
@@ -739,7 +739,7 @@ if page == "📊 Production Analytics":
                     }
                     
                     response = requests.post(
-                        "http://127.0.0.1:8000/api/process-csv/",
+                        "https://backend-2-eon0.onrender.com/api/process-csv/",
                         data=filter_data,
                         files={"file": uploaded_file}
                     )
